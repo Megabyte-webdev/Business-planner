@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>wordpress site</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<link rel='stylesheet' id='google-fonts-1-css'
+	href='https://fonts.googleapis.com/css?family=Lexend%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CLexend+Zetta%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CHomemade+Apple%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.2'
+	type='text/css' media='all' />
+	< <link rel="stylesheet" href="wordpress.css">
+
+
+
+	</head>
+
+	<body>
+
+
+		<div class="modal">
+			<p class="close" id="close">
+				&times;
+			</p>
+			<span class="statement">Statement</span>
+			<small style="color:var(--green); margin: 5px;">You can recompose/edit the content below</small>
+			<label for="fill"><b>Fill</b>
+				<textarea name="fill" autofocus id="modal-text">content</textarea>
+			</label>
+
+
+			<div class="modal-btn">
+				<button class="ok" onclick="collapse()" id="ok">Done</button>
+
+			</div>
+		</div>
+
+		<div id="loader">
+			<div>
+				<div class="inner one"></div>
+				<div class="inner two"></div>
+				<div class="inner three"></div>
+			</div>
+		</div>
+		<nav class="nav nav1">
+			<div class="logo">
+				<img src="Images/logo1.png" />
+			</div>
+			<h4>Business Planner</h4>
+		</nav>
+		<nav class="nav nav2">
+			<button title="business overview" class="active">Business Overview </button>
+			<button title="Competitive & market Analysis">Competitive & market Analysis </button>
+			<button title="Sales & marketing Plan">Sales & marketing Plan </button>
+			<button title="Financial Plan">Financial Plan </button>
+		</nav>
+		<main id="main">
+			<div id="container">
+				<section class="company-info">
+					<h4>Company Description</h4>
+					<div>
+						<input type="text" placeholder="Enter Company Name" />
+						<button value="upload"><i><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+							fill="transparent">
+							<path id="upload-icon" d="M12 18V4L18 10M12 4L6 10M6 22H18" />
+						</svg></i>
+							<input type="file" />
+							Company Logo</button>
+
+					</div>
+					<div>
+						<select name="business-structure">
+							<option selected="selected" disabled="disabled">select Business Structure</option>
+							<option>Sole Proprietorship </option>
+							<option>
+								Limited Liability Corporation </option>
+							<option>Partnership </option>
+							<option>
+								S-Corporation </option>
+							<option>
+								C-Corporation </option>
+						</select>
+
+						<input id="since" type="number" title="Year Founded" placeholder="Year Founded" />
+					</div>
+					<div>
+						<input type="text" placeholder="Enter Founder Name" />
+						<button value="upload"><i><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+							fill="transparent">
+							<path id="upload-icon" d="M12 18V4L18 10M12 4L6 10M6 22H18" />
+						</svg></i>Founder Headshot
+							<input type="file" />
+						</button>
+					</div>
+
+					<div>
+						<input type="text" placeholder="Enter Company Location" />
+
+					</div>
+				</section>
+				<section class="contact-detail">
+					<h4>Contact Details</h4>
+					<div>
+						<input type="text" placeholder="Your Name" />
+					</div>
+
+					<div>
+						<input type="text" placeholder="Email Address" />
+					</div>
+					<div>
+						<input type="text" placeholder="Phone Number" />
+
+					</div>
+					<div>
+						<input type="text" placeholder="Enter Website Url" />
+
+					</div>
+				</section>
+
+			</div>
+
+			<div class="aside">
+				<section>
+					<h4>Mission Statement </h4>
+					<div class="ask-ai">
+
+						<textarea placeholder=""></textarea>
+
+					</div>
+				</section>
+				<section>
+					<h4>Vision Statement</h4>
+					<div class="ask-ai">
+
+						<textarea placeholder=""></textarea>
+					</div>
+				</section>
+				<section>
+					<h4>Value Statement</h4>
+					<div class="ask-ai">
+
+						<textarea placeholder=""></textarea>
+					</div>
+				</section>
+			</div>
+
+			<group class="btn">
+
+				<button value="upload">Download Business Plan</button>
+			</group>
+
+		</main>
+
+
+		<div class="modalpage">
+			<div class="modal-head">
+				<h4 class="logo user-name">
+					Business Planner
+				</h4>
+				<a href="javascript:void();" class="icon">
+					<div class="menu-toggle active" onclick="toggle()">
+						<div class="one"></div>
+						<div class="two"></div>
+						<div class="three"></div>
+					</div>
+				</a>
+			</div>
+			<div class="desc">
+
+				<p>
+					Edit the prompts below to include your business details
+				</p>
+			</div>
+			<section></section>
+
+			<group class="btn">
+				<button id="fetch" value="" class="upload">Expand Info</button>
+				<button value="upload">Save and Exit</button>
+			</group>
+
+		</div>
+
+	</body>
+	<script src="instructions.js"></script>
+	<script src="wordpress.js"></script>
+        </html>
